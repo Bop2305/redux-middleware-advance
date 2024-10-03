@@ -10,7 +10,9 @@ import Feature from "./components/Feature";
 import SignOut from "./components/auth/SignOut";
 import PostContainer from "./features/post/post.container";
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement,
+);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
@@ -26,6 +28,5 @@ root.render(
         </App>
       </BrowserRouter>
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
-
