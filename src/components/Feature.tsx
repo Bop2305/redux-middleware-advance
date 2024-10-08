@@ -21,7 +21,7 @@ const Feature = () => {
     yup.object({
       code: yup
         .string()
-        .required()
+        .required("Code required")
         .matches(/^[0-9]+$/, "Must be only digits")
         .matches(/^[0-9]{4,}$/, "Must be exactly 4 digits"),
     }),
