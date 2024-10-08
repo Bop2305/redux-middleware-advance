@@ -10,12 +10,6 @@ import { useState } from "react";
 const Feature = () => {
   const [activeStep, setActiveStep] = useState(0);
 
-  const schema = yup.object({
-    email: yup.string().required("Email required"),
-    sex: yup.string().required("Sex required"),
-    address: yup.string().required("Address required"),
-  });
-
   const validationSchema = [
     yup.object({
       email: yup.string().required("Email required"),
@@ -25,7 +19,11 @@ const Feature = () => {
       address: yup.string().required("Address required"),
     }),
     yup.object({
-      code: yup.string().required("Code required"),
+      code: yup
+        .string()
+        .required()
+        .matches(/^[0-9]+$/, "Must be only digits")
+        .matches(/^[0-9]{4,}$/, "Must be exactly 4 digits"),
     }),
   ];
 
