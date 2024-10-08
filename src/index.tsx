@@ -9,6 +9,7 @@ import store from "./store";
 import Feature from "./components/Feature";
 import SignOut from "./components/auth/SignOut";
 import PostContainer from "./features/post/post.container";
+import ProfileContainer from "./features/profile/profile.container";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
@@ -24,6 +25,7 @@ root.render(
             <Route path="/signout" element={<SignOut />} />
             <Route path="/feature" element={<Feature />} />
             <Route path="/posts" element={<PostContainer />} />
+            <Route path="/profile" element={<ProfileContainer />} />
           </Routes>
         </App>
       </BrowserRouter>
